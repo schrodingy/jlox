@@ -1,4 +1,8 @@
 package com.craftinginterpreters.lox;
+// An interesting example of a parsing peculiarity is how Python docstrings work
+// https://www.python.org/dev/peps/pep-0257/
+
+
 
 import java.util.ArrayList;                                               
 import java.util.HashMap;                                                 
