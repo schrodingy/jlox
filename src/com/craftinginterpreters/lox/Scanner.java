@@ -92,8 +92,14 @@ class Scanner {
 	          } else if(match('*')){
 	        	  
 	        	  char temp_char = ' ';
-	        	  while (peek() != '*' && peekNext() != '/' && !isAtEnd()) temp_char = advance();
-	        	  if(temp_char == '\n') line++;
+	        	  // searches for the matching pair of symbols, after which it consumes them
+	        	  // while checking for newlines and incrementing line counter where appropriate
+	        	  while (peek() != '*' && peekNext() != '/' && !isAtEnd()){
+	        		  temp_char = advance();
+	        		  if(temp_char == '\n') line++;
+	        	  }
+	        	  advance();
+	        	  advance();
 	        	  // challenge 4
 	          } else {                                                      
 	            addToken(SLASH);                                            
