@@ -2,7 +2,7 @@ package com.craftinginterpreters.lox;
 // An interesting example of a parsing peculiarity is how Python docstrings work
 // https://www.python.org/dev/peps/pep-0257/
 
-
+// Author's advice: don't do what Javascript does with automatic semicolon insertion 
 
 import java.util.ArrayList;                                               
 import java.util.HashMap;                                                 
@@ -104,7 +104,7 @@ class Scanner {
 	        	  }
 	        	  advance();
 	        	  advance();
-	        	  // challenge 4
+	        	  // Challenge Problem 4: VALIDATED
 	          } else {                                                      
 	            addToken(SLASH);                                            
 	          }                                                             
